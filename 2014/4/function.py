@@ -8,36 +8,28 @@ def mag(f):
     l = f[i + 1].split(" ")
     for j in range(n):
        mas[i].append(int(l[j]))
-
  for i in range(n):
     for j in range(n):
-        sum += mas[i][j]
-        
+        sum += mas[i][j]      
     if oldsum == 0:
-            oldsum = sum
-            
+            oldsum = sum        
     if(sum != oldsum):
         return "No"
         break
     else:
         oldsum = sum
     sum = 0
- 
  for i in range(n):
     for j in range(n):
-        sum += mas[j][i]
-        
+        sum += mas[j][i]    
     if oldsum == 0:
         oldsum = sum
-
     if(oldsum != sum):
         return "No"
         break
     else:
-
         oldsum = sum
     sum = 0
-    
  for i in range(n):
     sum += mas[i][i]
 	

@@ -15,7 +15,6 @@ def mag(f):
             oldsum = sum        
     if(sum != oldsum):
         return "No"
-        break
     else:
         oldsum = sum
     sum = 0
@@ -26,7 +25,6 @@ def mag(f):
         oldsum = sum
     if(oldsum != sum):
         return "No"
-        break
     else:
         oldsum = sum
     sum = 0

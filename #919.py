@@ -1,5 +1,6 @@
 f = open("input.txt", "r").read().split("\n")
 n = int(f[0])
+
 mas = f[1].split(" ")
 line = ''
 k = 0

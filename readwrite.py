@@ -9,7 +9,7 @@ for line in open("in.txt", "r").read().split("\n"):
         j += 1
     i += 1
     
-print(mas)
+#print(mas)
 
 f = open('out.txt', 'w')
 

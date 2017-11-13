@@ -1,10 +1,7 @@
-def eratosthenes(n):
-    sieve = list(range(n + 1))
-    sieve[1] = 0 
-    for i in sieve:
-        if i > 1:
-            for j in range(i + i, len(sieve), i):
-                sieve[j] = 0
-    return sieve
-
-print(eratosthenes(int(input("n = "))))
+n = int(input("n = "))   
+numbers = list(range(2, n + 1))
+for number in numbers:
+    if number != 0:
+        for candidate in range(2 * number, n+1, number):
+            numbers[candidate-2] = 0    
+print(*list(filter(lambda x: x != 0, numbers)))

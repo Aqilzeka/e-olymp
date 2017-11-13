@@ -1,6 +1,6 @@
-a = int(input('a = '))
-b = int(input('b = '))
- 
+n = input().split(" ")
+
+a, b = int(n[0]), int(n[1])
 
 while a*b != 0:
     if a >= b:

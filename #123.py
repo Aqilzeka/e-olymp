@@ -7,5 +7,4 @@ def zero(d):
 
     return x
     
-
 print (zero(int(input())))

@@ -5,5 +5,5 @@ c = a+(b/100)
 c = c*n
 a = int(c)
 b = round((c - int(c)) * 100)
-print(a, b)
 
+print(a, b)

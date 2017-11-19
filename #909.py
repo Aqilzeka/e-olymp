@@ -1,4 +1,5 @@
 w = 0
+
 for i in open("input.txt", "r"):
     in_out = 0
     for j in i:
@@ -8,7 +9,6 @@ for i in open("input.txt", "r"):
         elif j == ' ':
             in_out = 0
  
-
 f = open("output.txt", "w")
 f.write(str(w))
 f.close()

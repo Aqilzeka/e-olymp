@@ -6,5 +6,5 @@ h = a/3600;
 a = a%3600;
 hv = a/60;
 s = a%60;
-print(int(d), int(h), int(hv), int(s))
 
+print(int(d), int(h), int(hv), int(s))

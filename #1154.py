@@ -1,5 +1,6 @@
 f = open("input.txt", "r").read().split("\n")
 w = open('output.txt', 'w')
+
 for i in range(len(f)):
     if i != 0: w.write("\n")
     x = f[i].split(" ")

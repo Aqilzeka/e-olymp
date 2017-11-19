@@ -3,6 +3,4 @@ def bin(a):
     if(a==2): return 4;
     return bin(a-1)+bin(a-2); 
 
-
-n = int(input())
-print(bin(n))
+print(bin(int(input())))

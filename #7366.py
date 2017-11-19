@@ -1,5 +1,10 @@
-f = open("input.txt", "r").read()
-f = int(f)
-w = open('output.txt', 'w')
-w.write(str(f // 86400)+" "+str(f // 3600)+" "+str((f // 60)% 60)+" "+str(f % 60))
-w.close()
+a = int(input())
+
+d = a/86400;
+a = a%86400;
+h = a/3600;
+a = a%3600;
+hv = a/60;
+s = a%60;
+print(int(d), int(h), int(hv), int(s))
+

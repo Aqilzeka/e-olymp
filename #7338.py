@@ -1,5 +1,6 @@
 n = int(input())
 k = 0
+
 for i in range(10,100):
     c=int(i*n)
     a=int(i/10+i%10)

@@ -1,6 +1,7 @@
 f = open("input.txt", "r").read().split("\n")
-n = int(f[0])
+w = open("output.txt", "w")
 
+n = int(f[0])
 mas = f[1].split(" ")
 line = ''
 k = 0
@@ -11,6 +12,6 @@ for i in range(n):
         line = line + template.format(float(mas[i])) + ' '
         k += 1
         
-w = open("output.txt", "w")
+
 w.write(str(k) + ' ' + line)
 w.close()

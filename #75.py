@@ -1,6 +1,7 @@
 a = int(input())
 m = int(input())
 s1, s, k, s2 = 0, 0, 0, 0
+
 while m > 0:
     s1 = a + s
     k += 1
@@ -9,4 +10,5 @@ while m > 0:
         break;
     else:
         s+=1
+        
 print(k + 1)

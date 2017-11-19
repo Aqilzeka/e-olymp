@@ -6,6 +6,7 @@ f = f[1].split(" ")
 p = 0
 m = 0.2
 u = 0.9
+
 for i in range(n):
     w = int(f[i])
     if (w<30):

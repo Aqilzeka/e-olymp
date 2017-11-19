@@ -1,5 +1,6 @@
 f = open("input.txt", "r").read().split("\n")
 w = open("output.txt", "w")
+
 for i in range(len(f)):
     if "//" in f[i]:
         temp = f[i].split("//")
@@ -12,6 +13,5 @@ for i in range(len(f)):
                 w.write(f[i].replace("->", ".") + '\n')
         else:
             w.write(f[i] + '\n')
+            
 w.close()
-
-

@@ -1,5 +1,6 @@
 n_str = input()
 n = int(n_str)
+
 s = 0
 
 while (n > 0):

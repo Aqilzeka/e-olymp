@@ -1,5 +1,6 @@
 r = open("input.txt", "r").read().split("\n")
 w = open("output.txt", "w")
+
 n = int(r[0])
 l = r[1].split(" ")
 

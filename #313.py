@@ -1,5 +1,6 @@
 f = open("input.txt", "r").read().split("\n")
 w = open("output.txt", "w")
+
 n = int(f[0])
 
 for i in range(1,n+1):

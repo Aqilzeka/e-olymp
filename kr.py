@@ -1,4 +1,3 @@
-kr
 # №3
 N = int(input())
 print(len([i for i in range(1,N+1) if not N % i]))

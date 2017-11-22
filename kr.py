@@ -21,18 +21,13 @@ print(r)
 # №6
 n = int(input())
 mass=[]
-
-def s(j):
-    for i in range(j):
-        if len(mass) < n:
-            mass.append(j)
-        else:
-            return 0
     
 for i in range(1,n+1):
-    if s(i) == 0:
-        break
-    
+    for j in range(i):
+        if len(mass) < n:
+            mass.append(i)
+        else:
+            break
 print(mass)
 
 

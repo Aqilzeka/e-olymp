@@ -20,11 +20,21 @@ print(r)
 
 # №6
 n = int(input())
-s = 0
-for i in range(1,n+1):
-    s += i
+mass=[]
 
-print(s)
+def s(j):
+    for i in range(j):
+        if len(mass) < n:
+            mass.append(j)
+        else:
+            return 0
+    
+for i in range(1,n+1):
+    if s(i) == 0:
+        break
+    
+print(mass)
+
 
 # №7
 def fib(n):

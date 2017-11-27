@@ -4,6 +4,7 @@ w = open("output.txt", "w")
 
 list = list(f[1])
 c = Counter(list)
+
 for key in c:
     if c[key] % 2 != 0:
         kub = key

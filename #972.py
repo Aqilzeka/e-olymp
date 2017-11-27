@@ -3,6 +3,7 @@ import operator
 f = open("input.txt", "r").read().split("\n")
 w = open("output.txt", "w")
 mass = {}
+
 for i in range(int(f[0])):
     temp = f[i+1].split(" ")
     temp = (int(temp[0])*60*60) + (int(temp[1])*60)+ int(temp[2])

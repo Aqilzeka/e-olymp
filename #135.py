@@ -5,11 +5,11 @@ def gcd(a, b):
 r = open("input.txt", "r").read().split("\n")
 n = int(r[0])
 m = []
+
 for i in r[1].split(" "):
     m.append(int(i))
 
-#print(n)
-#print(m)
+#print(n,m)
 
 for i in range(n):
     for j in range(i + 1, n):

@@ -13,5 +13,5 @@ for i in range(len(f)):
                 w.write(f[i].replace("->", ".") + '\n')
         else:
             w.write(f[i] + '\n')
-            
+
 w.close()

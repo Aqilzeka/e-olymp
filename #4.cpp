@@ -1,15 +1,15 @@
 #include <cstdlib>
 #include <iostream>
 #include <cmath>
- 
+
 using namespace std;
- 
+
 int main()
 {
     double x1, y1, r1;
     double x2, y2, r2;
     cin >> x1 >> y1 >> r1 >> x2 >> y2 >> r2;
- 
+
 	if( x1 == x2 && y1 == y2 && r1 == r2 )
 	{
 		cout << -1 << endl;
@@ -26,7 +26,7 @@ int main()
 	{
 		cout << 0 << endl;
 	}
-	else 
+	else
 	{
 		cout << 2 << endl;
 	}

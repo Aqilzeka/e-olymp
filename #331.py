@@ -25,8 +25,11 @@ for i in range(len(mass)):
     for j in range(len(mass[i])):
 
             if list(mass[i][j]) == reverse(list(mass[i][j])):
+                if mass[i][j].isdigit():
+                    continue
                 #print(i,list(mass[i][j]),reverse(list(mass[i][j])))
-                count += 1
+                else:
+                    count += 1
     counts_mass.append(count)
 
 w = open("output.txt", "w")

@@ -6,7 +6,7 @@ def reverse(a):
     return a
     
 
-r = open("input.txt", "r").read().replace(",", "").lower()
+r = open("input.txt", "r").read().replace(",", " ").replace(":", " ").replace(";", " ").replace("/", " ").lower()
 mass_sentence = r.split(".")
 mass_sentence.pop(-1)
 

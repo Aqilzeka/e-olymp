@@ -1,0 +1,22 @@
+n = int(input())  #кількість заявок
+minutes = []
+for i in range(n):  #створення масиву заявок
+    start, end = input().split()   
+    sh, sm = map(int, start.split(":")) 
+    start_min = sh*60 + sm  #переведення часу початку в хвилини
+    eh, em = map(int, end.split(":"))
+    end_min = eh*60 + em   #переведення часу кінця в хвилини
+    minutes.append([start_min, end_min])
+
+minutes.sort(key = lambda x: x[1]) #сортуємо по правих кінцях
+count = 0 #змінна для збереження кількості заявок
+while minutes != []: 
+    count += 1 
+    start, end = minutes.pop(0) #видаляємо першу заявку
+    i = 0
+    while i < len(minutes):
+        if minutes[i][0] < end: #перевіряємо чи не перетинає i-та заявка поточної
+            minutes.remove(minutes[i])
+        else:
+            i += 1
+print(count)

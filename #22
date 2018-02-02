@@ -1,0 +1,30 @@
+def func(a, b):
+    count = 0
+    if a == 1:
+        a += 1
+    for i in range(a, b+1):
+        numb1 = i; f1 = True; f2 = True;
+        j = 2
+        while j * j <= numb1:
+            f1 = numb1 % j != 0
+            if not f1:
+                break
+            j += 1
+        if f1:
+            numb2 = 0
+            while numb1 > 0:
+                numb2 = numb2*10 + numb1 % 10
+                numb1 = numb1 // 10
+            j = 2
+            while j * j <= numb2:
+                f2 = numb2 % j != 0
+                if not f2:
+                    break
+                j += 1
+            if f2:
+                count += 1
+    return count
+temp = input().split()
+a = int(temp[0])
+b = int(temp[1])
+print(func(a, b))

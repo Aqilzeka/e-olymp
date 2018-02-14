@@ -1,5 +1,4 @@
 def s(x, y):
-
     if y + 1 <= n - 1:
         if mass[x][y + 1][0] < mass[x][y][0] + main_mass[x][y + 1]:
             mass[x][y + 1][1] = mass[x][y][1] + "R"
@@ -9,8 +8,8 @@ def s(x, y):
         if mass[x - 1][y][0] < mass[x][y][0] + main_mass[x - 1][y]:
             mass[x - 1][y][1] = mass[x][y][1] + "F"
             mass[x - 1][y][0] = mass[x][y][0] + main_mass[x - 1][y]
-
             s(x - 1, y)
+
 
 r = open("input.txt", "r").read().split("\n")
 temp = r[0].split()
@@ -31,5 +30,8 @@ mass[len(main_mass) - 1][0][0] = main_mass[len(main_mass) - 1][0]
 s(len(main_mass) - 1, 0)
 
 w = open("output.txt", "w")
-w.write(mass[0][n - 1][1])
+if mass[0][n - 1][1] == '':
+    w.write((m - 1)*"F"+(n - 1)*"R")
+else:
+    w.write(mass[0][n - 1][1])
 w.close()

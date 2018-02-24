@@ -2,16 +2,8 @@
 alphabet = "абвгґдеєжзиіїйклмнопрстуфхцчшщьюя1234567890"
 abc = list(alphabet)
 
-def caesar_decrypt(str, n):
-
-    list_in = list(str)
-    out = ""
-    for i in list_in:
-        if i in abc:
-            out += abc[(abc.index(i) - n) % len(abc)]
-        else:
-            out += i
-    return out
+def line():
+    print("----------------------------------")
 
 def caesar_crypt(str, n):
     list_in = list(str)
@@ -19,6 +11,17 @@ def caesar_crypt(str, n):
     for i in list_in:
         if i in abc:
             out += abc[(abc.index(i) + n) % len(abc)]
+        else:
+            out += i
+    return out
+
+def caesar_decrypt(str, n):
+
+    list_in = list(str)
+    out = ""
+    for i in list_in:
+        if i in abc:
+            out += abc[(abc.index(i) - n) % len(abc)]
         else:
             out += i
     return out
@@ -54,8 +57,8 @@ def caesar_hack(str):
 
     return caesar_decrypt(str, key)
 
-def line():
-    print("----------------------------------")
+
+
 print("encrypt/decrypt alphabet:", alphabet)
 print("[1] - encrypt text")
 print("[2] - decrypt text")

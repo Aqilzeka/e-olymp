@@ -1,5 +1,6 @@
-abc = list("абвгґдеєжзиіїйклмнопрстуфхцчшщьюя1234567890")
-global str
+
+alphabet = "абвгґдеєжзиіїйклмнопрстуфхцчшщьюя1234567890"
+abc = list(alphabet)
 
 def caesar_decrypt(str, n):
 
@@ -13,7 +14,6 @@ def caesar_decrypt(str, n):
     return out
 
 def caesar_crypt(str, n):
-
     list_in = list(str)
     out = ""
     for i in list_in:
@@ -50,19 +50,49 @@ def caesar_hack(str):
             print("key =", i_print, "-", out)
     print("")
 
-    key = int(input("decrypt key - "))
+    key = int(input("enter decrypt key from 1 to " + len(abc).__str__() + ": "))
 
     return caesar_decrypt(str, key)
 
+def line():
+    print("----------------------------------")
+print("encrypt/decrypt alphabet:", alphabet)
+print("[1] - encrypt text")
+print("[2] - decrypt text")
+print("[3] - crack encryption")
+command = input("select action: ")
 
-r = open("input.txt", "r").read().lower()
-#w = open("output.txt", "w")
-key = 2
-crypt = caesar_crypt(r,key)
-print(crypt)
-decrypt = caesar_decrypt(crypt,key)
-print(decrypt)
-print(caesar_hack(crypt))
-    #w.write(ROT(temp[1], int(temp[0]))+"\n")
+if command not in ['1', '2', '3']:
+    print("wrong action")
+    exit()
+elif command == '1':
+    filename = input("enter a file name: ")
+    key = int(input("enter encrypt key from 1 to " + len(abc).__str__() + ": "))
+    file = open(filename, "r").read().lower()
 
-#w.close()
+    line()
+    print("encrypted text")
+    print(caesar_crypt(file, key))
+    line()
+
+elif command == '2':
+    filename = input("enter a file name: ")
+    key = int(input("enter decrypt key from 1 to " + len(abc).__str__() + ": "))
+    file = open(filename, "r").read().lower()
+
+    line()
+    print("decrypted text")
+    print(caesar_decrypt(file, key))
+    line()
+
+elif command == '3':
+    filename = input("enter a file name: ")
+
+    file = open(filename, "r").read().lower()
+    decrypted = caesar_hack(file)
+
+    line()
+    print("decrypted text")
+    print(decrypted)
+    line()
+

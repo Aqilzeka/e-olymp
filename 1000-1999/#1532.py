@@ -14,7 +14,7 @@ mass = [int(i) for i in r]
 print(mass_c)
 for i in range(len(mass)):
     if i == 0:
-        w.write(str(mass_c[mass[i]/2]))
+        w.write(str(mass_c[int(mass[i]/2)]))
     else:
-        w.write("\n" + str(mass_c[mass[i]/2]))
+        w.write("\n" + str(mass_c[int(mass[i]/2)]))
 w.close()

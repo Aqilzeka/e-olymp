@@ -71,4 +71,4 @@ function(0,0)
 for i in range(n):
     for j in range(n):
         print count_mass[i][j],
-    print
+    print 

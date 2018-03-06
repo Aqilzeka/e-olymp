@@ -1,5 +1,3 @@
-
-
 r = open("input.txt", "r").read().split("\n")
 temp = r[0].split(" ")
 n, s, f = int(temp[0]),int(temp[1]),int(temp[2])
@@ -9,17 +7,24 @@ for i in range(n):
     temp = r[i + 1].split(" ")
     for j in range(n):
         g[i].append(int(temp[j]))
-        
-ex = set()
-data = []
-def dfs(node):
-    ex.add(node)
-    for i in range(len(g)):
-        if g[node][i] == 1 and i not in ex:
-            data.append(i)
-            dfs(i)
+for i in range(n):
+    for j in range(n):
+        if i == j:
+            g[i][j] = 0
 
-dfs(s-1)
+arr = [0 for i in range(n)]
+def bfs(j, h, f):
+    for i in range(n):
+        if g[j][i] == 1:
+            if arr[i] == 0:
+                arr[i] = h + 1
+                bfs(i, h + 1, f)
+            elif arr[i] > h + 1:
+                arr[i] = h + 1
+                bfs(i, h + 1, f)
+
+bfs(s-1, 0, f)
+
 w = open("output.txt","w")
-w.write(str(data[f-1]))
+w.write(str(arr[f - 1]))
 w.close()

@@ -60,7 +60,7 @@ for i in range(n):
 
 for i in range(n):
     for j in range(n):
-        print mass[i][j],
+        print (mass[i][j], end = " ")
     print
 print
 
@@ -70,5 +70,5 @@ print
 function(0,0)
 for i in range(n):
     for j in range(n):
-        print count_mass[i][j],
+        print (count_mass[i][j], end = " ")
     print 

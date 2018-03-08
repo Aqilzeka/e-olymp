@@ -58,7 +58,6 @@ for i in range(n):
             mass[i].append(temp[j])
             count_mass[i].append(-1)
 
-
 for i in range(n):
     for j in range(n):
         print (mass[i][j], end = " ")

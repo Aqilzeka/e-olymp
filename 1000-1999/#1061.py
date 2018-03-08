@@ -46,8 +46,10 @@ def function(i, j):
 
 r = open("input.txt", "r").read().split("\n")
 n = int(r[0])
+
 mass = []
 count_mass = []
+
 for i in range(n):
     temp = list(r[i + 1])
     mass.append([])

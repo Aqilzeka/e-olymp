@@ -3,22 +3,22 @@ def function(i, j):
             if i == 0 and j == 0:
                 if mass[i + 1][j] == "#":
                     count += 1
-                else:
+                elif count_mass[i + 1][j] == -1:
                     function(i + 1, j)
         
                 if mass[i][j + 1] == "#":
                     count += 1
-                else:
+                elif count_mass[i][j + 1] == -1:
                     function(i, j + 1)
                     
             elif i == n - 1 and j == n - 1:
                 if mass[i - 1][j] == "#":
                     count += 1
-                else:
+                elif count_mass[i - 1][j] == -1:
                     function(i - 1, j)
                 if mass[i][j - 1] == "#":
                     count += 1
-                else:
+                elif count_mass[i][j - 1] == -1:
                     function(i, j - 1)
                     
             elif i < n and j < n:
@@ -61,8 +61,8 @@ for i in range(n):
 for i in range(n):
     for j in range(n):
         print (mass[i][j], end = " ")
-    print
-print
+    print()
+print()
 
 
 
@@ -70,5 +70,5 @@ print
 function(0,0)
 for i in range(n):
     for j in range(n):
-        print (count_mass[i][j], end = " ")
-    print 
+        print(count_mass[i][j], end = " ")
+    print()

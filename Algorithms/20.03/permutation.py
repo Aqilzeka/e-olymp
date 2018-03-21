@@ -12,3 +12,8 @@ def permutation(lst):
        for p in permutation(remLst):
            l.append([m] + p)
     return l
+ 
+ 
+data = [1,0,1,0,0,0,1]
+for p in permutation(data):
+    print (p)

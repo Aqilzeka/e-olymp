@@ -14,7 +14,7 @@ def bfs(s):
     stack = [s]
     while stack:
         v = stack.pop(0)
-        for w in adj[v]: 
+        for w in g[v]:
             if level[w] is -1: 
                 stack.append(w) 
                 level[w] = level[v] + 1 

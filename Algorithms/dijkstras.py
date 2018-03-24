@@ -1,5 +1,5 @@
 def Dijkstra(N, S, matrix):
-	valid = [True]*N        
+	valid = [True]*N
 	weight = [1000000]*N
 	weight[S] = 0
 	for i in range(N):
@@ -14,15 +14,14 @@ def Dijkstra(N, S, matrix):
 				weight[i] = weight[ID_min_weight] + matrix[ID_min_weight][i]
 		print(valid)
 		valid[ID_min_weight] = False
-		
 	return weight
 
 inf = float("inf")
-matrix = [[inf,2,inf,1,inf],  # матрица связности
-         [2,inf,inf,inf,5],
-         [inf,inf,inf,5,1],
-         [1,inf,5,inf,inf],
-         [inf,6,1,inf,inf]]
+matrix = [[inf,2,inf,1,inf],
+		[2,inf,inf,inf,5],
+		[inf,inf,inf,5,1],
+		[1,inf,5,inf,inf],
+		[inf,6,1,inf,inf]]
 print(matrix)
 
 print(Dijkstra(5,0,matrix))

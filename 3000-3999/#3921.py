@@ -1,5 +1,3 @@
-
-
 r = open("input.txt", "r").read().split("\n")
 mass = [int(i) for i in r[1].split()]
 mass.sort()
@@ -11,4 +9,3 @@ for i in range(len(mass)):
     else: w.write(" " + str(mass[i]))
 
 w.close()
-#exit()

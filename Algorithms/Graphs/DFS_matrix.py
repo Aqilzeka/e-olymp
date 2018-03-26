@@ -1,4 +1,5 @@
 #DFS_matrix
+
 g = [[0,1,1],  # матрица связности
      [1,1,1],
      [1,0,1]]
@@ -10,4 +11,5 @@ def dfs(node):   # start - начальная вершина
         if g[node][i] == 1 and i not in ex:
             print(i)
             dfs(i)
+
 dfs(1)

@@ -1,6 +1,12 @@
 #DFS_list
 
-list_of_adjacency = [[1,3], [0], [3], [2,0], []]
+list_of_adjacency = [
+    [],
+    [],
+    [],
+    [],
+    []
+]
 visited = [False for i in range(len(list_of_adjacency ))]
 
 def dfs(v):
@@ -12,3 +18,5 @@ def dfs(v):
 for c in range(len(list_of_adjacency )):
     if not visited[c]:
         dfs(c)
+
+print(visited)

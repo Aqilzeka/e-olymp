@@ -11,6 +11,7 @@ def v(a):
 n = int(input())
 mass = []
 first = n
+
 for i in range(int(n**(1/3))):
     k_cub = n**(1/3)
     #print(i, int(k_cub), n )
@@ -31,7 +32,3 @@ elif sum([i**3 for i in mass]) + 1 == first:
 else:
     mass = -1
     print(mass)
-
-
-
-    

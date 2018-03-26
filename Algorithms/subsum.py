@@ -38,3 +38,6 @@ for i in mass:
 
 
 print(tree)
+https://www.geeksforgeeks.org/dynamic-programming-subset-sum-problem/
+https://stackoverflow.com/questions/29456502/subset-sum-with-backtracking-on-python
+https://github.com/kaushikthedeveloper/GeeksforGeeks-python/blob/master/Scripts/Subset%20sum%20problem.py

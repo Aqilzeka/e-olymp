@@ -37,9 +37,7 @@ for i in range(n):
                 mass[i][j] += 1
             if (i < n - 1 and j < m - 1 and mass[i + 1][j + 1] == -1):
                 mass[i][j] += 1
-            #file_w.write(str(chr(mass[i][j] + 48)))
             file_w.write(str(mass[i][j]))
-            #print(chr(mass[i][j] + 48), end="")
         if j < m - 1:
             file_w.write(" ")
                 #print(" ", end="")
